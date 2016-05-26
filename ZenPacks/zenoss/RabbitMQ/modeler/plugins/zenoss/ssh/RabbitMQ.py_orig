@@ -22,10 +22,7 @@ from Products.ZenUtils.Utils import prepId
 
 
 class RabbitMQ(CommandPlugin):
-
-
-    """
-    container_command = (
+    command = (
         'rabbitmqctl status 2>&1 && ('
         'echo __COMMAND__ ; '
         'for vhost in $(rabbitmqctl -q list_vhosts) ; do '
@@ -39,16 +36,6 @@ class RabbitMQ(CommandPlugin):
         'echo "__VHOST__" ; '
         'done'
         ')'
-        )
-    """
-    container_command = '"rabbitmqctl status 2>&1 && echo __COMMAND__ ; for vhost in \$(rabbitmqctl -q list_vhosts); do echo VHOST: \$vhost ; echo __SPLIT__ ; rabbitmqctl -q list_exchanges -p \$vhost name type durable auto_delete arguments ; echo __SPLIT__ ; rabbitmqctl -q list_queues -p \$vhost name durable auto_delete arguments ; echo __VHOST__ ; done "'
-
-    run_command = 'serviced service attach RabbitMQ su - root -c '
-    run_command = run_command + container_command
-    LOG.debug('run_command is %s \n' % (run_command))
-   
-    command = (
-        run_command
         )
 
     def process(self, device, results, unused):

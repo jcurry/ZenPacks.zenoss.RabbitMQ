@@ -3,13 +3,13 @@
 # or saved.  Do not modify them directly here.
 # NB: PACKAGES is deprecated
 NAME = "ZenPacks.zenoss.RabbitMQ"
-VERSION = "1.1.0dev"
+VERSION = "1.5.1jc"
 AUTHOR = "Zenoss Labs"
 LICENSE = "GPLv2"
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.zenoss']
 PACKAGES = ['ZenPacks', 'ZenPacks.zenoss', 'ZenPacks.zenoss.RabbitMQ']
 INSTALL_REQUIRES = []
-COMPAT_ZENOSS_VERS = ">=3.2"
+COMPAT_ZENOSS_VERS = ">=5.0"
 PREV_ZENPACK_NAME = ""
 # STOP_REPLACEMENTS
 ################################

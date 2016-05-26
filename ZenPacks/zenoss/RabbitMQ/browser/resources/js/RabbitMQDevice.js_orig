@@ -376,13 +376,13 @@ ZC.RabbitMQQueuePanel = Ext.extend(ZC.RabbitMQComponentGridPanel, {
                 dataIndex: 'rabbitmq_node',
                 header: _t('Node'),
                 renderer: Zenoss.render.RabbitMQ_entityLinkFromGrid,
-                width: 120
+                width: 140
             },{
                 id: 'rabbitmq_vhost',
                 dataIndex: 'rabbitmq_vhost',
                 header: _t('VHost'),
                 renderer: Zenoss.render.RabbitMQ_entityLinkFromGrid,
-                width: 70
+                width: 80
             },{
                 id: 'durable',
                 dataIndex: 'durable',
@@ -409,20 +409,20 @@ ZC.RabbitMQQueuePanel = Ext.extend(ZC.RabbitMQComponentGridPanel, {
                 dataIndex: 'threshold_messages_max',
                 header: _t('Threshold'),
                 sortable: true,
-                width: 60
+                width: 70
             },{
                 id: 'monitored',
                 dataIndex: 'monitored',
                 header: _t('Monitored'),
                 renderer: Zenoss.render.checkbox,
                 sortable: true,
-                width: 55
+                width: 65
             },{
                 id: 'locking',
                 dataIndex: 'locking',
                 header: _t('Locking'),
                 renderer: Zenoss.render.locking_icons,
-                width: 55
+                width: 65
             }]
         });
         ZC.RabbitMQQueuePanel.superclass.constructor.call(this, config);

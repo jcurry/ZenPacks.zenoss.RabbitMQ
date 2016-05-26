@@ -1,9 +1,8 @@
-*.py[cod]
+*~
+*.pyc
+*.pyo
+build/
+setuptools*
+*.egg-info/
+*EGG-INFO*
 
-build
-dist
-*.egg-info
-
-.idea/
-.pydevproject
-.project
